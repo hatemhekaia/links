@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
+:root{
+    --white: #ddd;
+    --dark: #111;
+    --black: #000;
+}
+html {
+    background-color: var(--dark);
+    margin: 0;
+    padding: 0;
+    font-family: 'Tajawal', sans-serif;
+}
+body{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    color: var(--white);
+    
+}
+body, .in-back, .in-back .header, .in-back ul, li .icon, a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+img{
+    max-width: 100%;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+    display: block;
+    text-align: center;
+   
+}
+.out-back{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.animated{
+    background-image: url(../images/free_cover.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: 100% 50%;
+    filter: blur(0)contrast(.9);
+    -webkit-animation:mymove 5s linear infinite;
+    animation:mymove 50s linear infinite;
+}
+@-webkit-keyframes mymove {
+    from {
+        background-position: 0% 0%;
+        background-size: 100% 0%;
+        transform: rotate(0deg);
+        filter: blur(40px)contrast(.9);
+    }
+    to {
+        background-position: 100% -100%;
+        background-size: 300% 150%;
+        transform: rotate(180deg);
+        filter: blur(10px)contrast(.9);
+    }
+}
+@keyframes mymove {
+    from {
+        background-position: 0% 0%;
+        background-size: 100% 0%;
+        transform: rotate(0deg);
+        filter: blur(40px)contrast(.9);
+    }
+    to {
+        background-position: 100% -100%;
+        background-size: 300% 150%;
+        transform: rotate(180deg);
+        filter: blur(10px)contrast(.9);
+    }
+}
+
+.in-back{
+    background: rgba(0, 0, 0, .3);
+    padding: 0;
+    border-radius: 21px;
+    border: 1px solid var(--black);
+    max-width: 1200px;
+    overflow: hidden;
+}
+.in-back .header{
+    position: relative;
+}
+.in-back .header a{
+    display: flex;
+}
+.logo{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    max-width: 100px;
+}
+.in-back ul{
+flex-direction: row;
+width: 100%;
+margin: 0;
+}
+.in-back ul li {
+    flex: 0 0 20%;
+    display: block;
+    border-right: 2px solid var(--black);
+    border-top: 2px solid var(--black);
+    height: 100%;
+}
+.in-back ul li:hover {
+    background-color: rgba(0, 0, 0, .6);
+    transition: all ease-in-out .2s;
+}
+.youtube .icon * {
+fill: #ff0000;
+}
+.facebook .icon *{
+fill: #0674e7!important;
+}
+.twitter .icon *{
+fill: #00aced;
+}
+li .icon {
+padding: 40px 0;
+}
+li .icon *{
+    max-height: 40px;
+}
+.links{
+    display: flex;
+    direction: rtl;
+}
+.links a{
+    font-size: 18px;
+    background: rgba(0, 0, 0, .2);
+    padding: 10px;
+    margin: 15px;
+    border-radius: 14px;
+    border: 1px solid var(--black);
+    cursor: pointer;
+}
+
+
+
+@media (max-width:1400px){
+.in-back {
+    max-width: 90%;
+    justify-content: flex-start;
+}
+li .icon {
+    padding: 2vw;
+}
+li .icon * {
+    max-height: 6vw;
+}
+}
+@media (max-width:767px){
+    .logo {
+        top: 5vw;
+        right: 4vw;
+        max-width: 12vw;
+    }
+    .animated{
+        animation:mymove 20s linear infinite;
+    }
+    @keyframes mymove {
+        from {
+            background-size: 0% 0%;
+            background-position: 0% 0%;
+            transform: rotate(0deg);
+            filter: blur(40px)contrast(.9);
+            
+        }
+        to {
+            background-size: 100% 100%;
+            background-position: 100% -100%;
+            transform: rotate(180deg);
+            filter: blur(10px)contrast(.9);
+        }
+    }
+    @-webkit-keyframes mymove {
+        from {
+            background-size: 0% 0%;
+            background-position: 0% 0%;
+            transform: rotate(0deg);
+            filter: blur(40px)contrast(.9);
+            
+        }
+        to {
+            background-size: 100% 100%;
+            background-position: 100% -100%;
+            transform: rotate(180deg);
+            filter: blur(10px)contrast(.9);
+        }
+    }
+
+}
