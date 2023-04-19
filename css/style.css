@@ -156,17 +156,19 @@ li .icon *{
 
 
 @media (max-width:1400px){
-.in-back {
-    max-width: 90%;
-    justify-content: flex-start;
+    .in-back {
+        max-width: 90%;
+        justify-content: flex-start;
+    }
+    li .icon {
+        padding: 2vw;
+    }
+    li .icon * {
+        max-height: 6vw;
+    }
 }
-li .icon {
-    padding: 2vw;
-}
-li .icon * {
-    max-height: 6vw;
-}
-}
+
+
 @media (max-width:767px){
     .logo {
         top: 5vw;
@@ -175,6 +177,27 @@ li .icon * {
     }
     .animated{
         animation:mymove 20s linear infinite;
+    }
+    .in-back ul {
+        flex-wrap: wrap;
+        height: 65vh;
+    }
+    .in-back {
+        max-width: 75%;
+    }
+    .in-back ul li {
+        height: 30%;
+        flex: 0 0 48%;
+        border: none;
+        border-radius: 10px;
+    }
+    .in-back ul li a, .in-back ul li a span{
+        height: 100%;
+        width: 100%;
+    }
+    .in-back ul li a span{
+        width: 90%;
+        height: 90%;
     }
     @keyframes mymove {
         from {
@@ -205,6 +228,17 @@ li .icon * {
             transform: rotate(180deg);
             filter: blur(10px)contrast(.9);
         }
+    }
+
+}
+
+
+@media (max-width:500px){
+    .in-back {
+        max-width: 90%;
+    }
+    .in-back ul {
+        height: 50vh;
     }
 
 }
